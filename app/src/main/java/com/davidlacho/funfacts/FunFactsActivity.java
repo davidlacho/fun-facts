@@ -2,13 +2,15 @@ package com.davidlacho.funfacts;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class FunFactsActivity extends AppCompatActivity {
+    public static final String TAG = FunFactsActivity.class.getSimpleName();
 
 //    Declare our view variables
     private TextView factTextView;
@@ -41,5 +43,7 @@ public class MainActivity extends AppCompatActivity {
         };
 
         showFactButton.setOnClickListener(listener);
+//        Toast.makeText(this, "Oh hai there!", Toast.LENGTH_SHORT).show();
+        Log.d(TAG, "HELLO, WORLD!");
     }
 }
